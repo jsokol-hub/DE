@@ -22,7 +22,7 @@ SELECT price,
         WHEN price BETWEEN 4 AND 5 THEN 'Mid cost'
         WHEN price > 5 THEN 'High cost'
         ELSE 'Undefined'
-    END as PriceCategory
+    END as price_category
 FROM processing2;
 
 --QUERY 3
@@ -38,9 +38,9 @@ SELECT SUM(price) AS sum_price,
         WHEN price BETWEEN 4 AND 5 THEN 'Mid cost'
         WHEN price > 5 THEN 'High cost'
         ELSE 'Undefined'
-    END as PriceCategory
+    END as price_category
 FROM processing
-GROUP BY PriceCategory;
+GROUP BY price_category;
 
 --QUERY 4
 
