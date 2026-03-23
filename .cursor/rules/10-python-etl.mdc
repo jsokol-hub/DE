@@ -1,0 +1,23 @@
+---
+description: Python ETL coding standards for this repository
+globs: ["src/**/*.py", "tests/**/*.py"]
+---
+
+When working on Python files in this repository:
+
+- Keep modules small and readable.
+- Separate extract, transform, and load logic when possible.
+- Use functions with clear names and narrow responsibilities.
+- Add logging for important steps, row counts, and failures.
+- Add basic validation early.
+- Prefer explicit behavior over hidden magic.
+- Keep code runnable locally without unnecessary infrastructure.
+- Use type hints when they improve clarity.
+- Add brief docstrings for non-trivial functions.
+- Make scripts safe to rerun when practical.
+
+For mini-projects, prioritize:
+1. working end-to-end pipeline
+2. reproducible setup
+3. readable code
+4. simple tests or validation checks

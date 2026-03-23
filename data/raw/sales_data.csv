@@ -1,0 +1,51 @@
+order_id,order_date,customer_id,customer_name,product_name,category,quantity,unit_price,city,country
+1001,2024-01-15,C001,Alice Johnson,Wireless Mouse,Electronics,2,29.99,New York,USA
+1002,2024-01-15,C002,Bob Smith,USB-C Hub,Electronics,1,49.99,London,UK
+1003,2024-01-16,C003,Clara Wei,Notebook A5,Office Supplies,10,12.50,Toronto,Canada
+1004,2024-01-16,C004,David Park,Desk Lamp,Furniture,1,45.00,Tokyo,Japan
+1005,2024-01-17,C001,Alice Johnson, Wireless Mouse ,Electronics,1,29.99,New York,USA
+1006,2024-01-17,C005,Emma Brown,Webcam HD,electronics,2,59.99,Sydney,Australia
+1007,2024-01-18,C006,Frank Miller,Paper Clips Box,Office Supplies,20,3.50,Berlin,Germany
+1008,2024-01-18,C032,,Bluetooth Keyboard,Electronics,1,69.99,Paris,France
+1009,2024-01-19,C008,Hannah Lee,Printer Paper,Office Supplies,5,24.99,New York,USA
+1010,15/01/2024,C009,Ivan Petrov,Monitor Stand,Furniture,1,79.99,London,UK
+1011,2024-01-20,C010,Julia Santos,Headset Pro,ELECTRONICS,1,89.99,Toronto,Canada
+1012,2024-01-20,C002,Bob Smith, Cable Organizer ,office supplies,3,15.99,London,UK
+1013,2024-01-21,C011,Karl Fischer,Ergonomic Chair,Furniture,1,299.99,Berlin,Germany
+1014,2024-01-21,C003,Clara Wei,Ballpoint Pen Set,Office Supplies,4,8.99,Toronto,Canada
+1015,2024-01-22,C012,Lisa Chen,Whiteboard Marker Set,Office Supplies,6,6.99,,Japan
+1016,2024-01-22,C001,Alice Johnson,USB-C Hub,Electronics,1,49.99,New York,USA
+1017,2024-01-23,C013,Maria Garcia,Standing Mat,Furniture,1,35.00,Paris,France
+1018,2024-01-23,C005,Emma Brown,Wireless Mouse,Electronics,3,29.99,Sydney,Australia
+1019,2024-01-23,C005,Emma Brown,Wireless Mouse,Electronics,3,29.99,Sydney,Australia
+1020,2024-01-24,C014,Nikolai Ivanov,Headset Pro,Electronics,-1,89.99,Berlin,Germany
+1021,2024-01-24,C006,Frank Miller,Notebook A5,Office Supplies,8,12.50,Berlin,Germany
+1022,2024-01-25,C015,,Desk Lamp,Furniture,2,45.00,Tokyo,Japan
+1023,2024-01-25,C004,David Park,Printer Paper,office supplies,3,24.99,Tokyo,Japan
+1024,2024-01-26,C016,Patricia Holmes,Webcam HD,Electronics,1,59.99,London,UK
+1025,25/01/2024,C017,Qiang Liu,Bluetooth Keyboard,electronics,1,69.99,Sydney,Australia
+1026,2024-01-27,C008,Hannah Lee,Cable Organizer,Office Supplies,2,15.99,New York,USA
+1027,2024-01-27,C018,Rachel Adams,Monitor Stand, Furniture ,1,79.99,Toronto,Canada
+1028,2024-01-28,C011,Karl Fischer,Paper Clips Box,Office Supplies,15,3.50,Berlin,Germany
+1029,2024-01-28,C019,Stefan Braun,Ergonomic Chair,Furniture,1,299.99,Paris,France
+1030,2024-01-29,C020,Tomoko Sato,Whiteboard Marker Set,Office Supplies,4,6.99,,Japan
+1031,2024-01-29,C001,Alice Johnson,Headset Pro,Electronics,1,89.99,New York,USA
+1032,2024-01-30,C021,Uma Patel,Standing Mat,Furniture,2,35.00,London,UK
+1033,2024-01-30,C002,Bob Smith,Wireless Mouse,Electronics,,29.99,London,UK
+1034,2024-01-31,C022,Victor Novak,USB-C Hub,Electronics,1,49.99,Berlin,Germany
+1035,2024-01-31,C012,,Notebook A5,Office Supplies,6,12.50,,Japan
+1036,2024-02-01,C003,Clara Wei,Desk Lamp,Furniture,1,45.00,Toronto,Canada
+1037,2024-02-01,C023,Wendy O'Brien,Webcam HD,Electronics,1,59.99,Sydney,Australia
+1038,2024-02-02,C024,Xavier Dupont,Bluetooth Keyboard,ELECTRONICS,2,69.99,Paris,France
+1039,2024-02-02,C013,Maria Garcia,Ballpoint Pen Set,Office Supplies,3,8.99,Paris,France
+1040,02/02/2024,C025,Yuki Tanaka,Printer Paper,Office Supplies,10,24.99,Tokyo,Japan
+1041,2024-02-03,C010,Julia Santos,Cable Organizer,Office Supplies,1,15.99,Toronto,Canada
+1042,2024-02-03,C026,Zara Khan,Ergonomic Chair,Furniture,1,299.99,London,UK
+1043,2024-02-03,C026,Zara Khan,Ergonomic Chair,Furniture,1,299.99,London,UK
+1044,2024-02-04,C007,Grace Kim,Paper Clips Box,office supplies,25,3.50,Paris,France
+1045,2024-02-04,C027,Anton Volkov,Headset Pro,Electronics,1,89.99,Berlin,Germany
+1046,2024-02-05,C028,Beatrice Rossi,Standing Mat,Furniture,1,35.00,Paris,France
+1047,2024-02-05,C020,Tomoko Sato,Monitor Stand,Furniture,2,79.99,Tokyo,Japan
+1048,2024-02-06,C015,Oscar Nilsson,Whiteboard Marker Set,Office Supplies,3,6.99,London,UK
+1049,2024-02-06,C029,Carlos Mendez,Wireless Mouse,electronics,4,29.99,New York,USA
+1050,2024-02-07,C030,Diana Kovacs, USB-C Hub , Electronics ,1,49.99,Berlin,Germany

@@ -1,0 +1,46 @@
+order_id,order_date,customer_name,drink,size,price,branch,payment_method
+5001,2024-03-01,Anna Petrova,Latte,M,4.50,Central,card
+5002,2024-03-01,Boris Ivanov, Cappuccino ,L,5.20,Central,cash
+5003,2024-03-01,Anna Petrova,Espresso,S,3.00,Central,card
+5004,2024-03-01,Diana Orlova,Flat White,M,4.80,Riverside,card
+5005,2024-03-02,Elena Kosova,LATTE,L,5.50,Central,card
+5006,2024-03-02,Boris Ivanov,Americano,M,3.80, riverside ,cash
+5007,2024-03-02,Fedor Malkov,Cappuccino,S,3.50,Park,card
+5008,02/03/2024,Grigory Semenov,Latte,M,4.50,Park,cash
+5009,2024-03-02,,Espresso,S,3.00,Central,card
+5010,2024-03-03,Anna Petrova,Flat White,M,4.80,Riverside,card
+5011,2024-03-03,Boris Ivanov,latte,M,4.50,Central,cash
+5012,2024-03-03,Irina Volkova, Mocha ,L,5.80,Park,card
+5013,2024-03-03,Diana Orlova,Americano,S,3.20,Riverside,cash
+5014,03/03/2024,Elena Kosova,Cappuccino,M,4.20,Central,card
+5015,2024-03-04,Fedor Malkov,Espresso,S,3.00,Park,cash
+5016,2024-03-04,Grigory Semenov,FLAT WHITE,L,5.60,Park,card
+5017,2024-03-04,Anna Petrova,Mocha,M,5.00,Central,card
+5018,2024-03-04,,Latte,S,3.80,Riverside,cash
+5019,2024-03-04,Boris Ivanov,Cappuccino,L,5.20,Central,card
+5020,2024-03-05,Irina Volkova,Americano,M,3.80,Park,card
+5021,2024-03-05,Diana Orlova,Espresso,S,3.00,Riverside,cash
+5022,2024-03-05,Elena Kosova,Latte,M,4.50,Central,card
+5023,05/03/2024,Fedor Malkov,Mocha,L,5.80,Park,cash
+5024,2024-03-05,Grigory Semenov, cappuccino ,M,4.20,Park,card
+5025,2024-03-06,Anna Petrova,Flat White,L,5.60,Central,card
+5026,2024-03-06,Boris Ivanov,Latte,S,3.80,Central,cash
+5027,2024-03-06,Boris Ivanov,Latte,S,3.80,Central,cash
+5028,2024-03-06,Irina Volkova,AMERICANO,M,3.80,Park,card
+5029,2024-03-06,Diana Orlova,Mocha,M,5.00,Riverside,card
+5030,2024-03-07,Elena Kosova,Espresso,S,3.00,Central,cash
+5031,2024-03-07,Fedor Malkov,Latte,L,5.50,Park,card
+5032,2024-03-07,Grigory Semenov,Cappuccino,M,4.20, park ,cash
+5033,07/03/2024,Anna Petrova,Americano,S,3.20,Central,card
+5034,2024-03-07,,Flat White,M,4.80,Riverside,cash
+5035,2024-03-08,Boris Ivanov,Mocha,L,5.80,Central,card
+5036,2024-03-08,Irina Volkova,Espresso,S,3.00,Park,cash
+5037,2024-03-08,Diana Orlova,LATTE,M,4.50,Riverside,card
+5038,2024-03-08,Elena Kosova,Cappuccino,L,5.20,Central,card
+5039,2024-03-08,Elena Kosova,Cappuccino,L,5.20,Central,card
+5040,2024-03-09,Fedor Malkov,Americano,M,,Park,cash
+5041,2024-03-09,Grigory Semenov,Flat White,S,4.00,Park,card
+5042,2024-03-09,Anna Petrova, Mocha,L,5.80,Central,card
+5043,2024-03-09,Boris Ivanov,Latte,M,4.50,Central,cash
+5044,09/03/2024,Irina Volkova,Espresso,S,3.00,Park,card
+5045,2024-03-10,Diana Orlova,Cappuccino,M,4.20,Riverside,cash

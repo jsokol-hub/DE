@@ -1,0 +1,20 @@
+---
+description: SQL and modeling guidance for analytical and warehouse-style work
+globs: ["sql/**/*.sql", "docs/**/*.md"]
+---
+
+When working with SQL or data modeling in this repository:
+
+- Prefer clear SQL over dense SQL.
+- Use CTEs to improve readability when helpful.
+- Name tables and columns so their intent is obvious.
+- Be explicit about table grain.
+- Separate raw, staging, and analytical layers when useful.
+- Explain why a table is fact-like or dimension-like.
+- Use PostgreSQL-friendly SQL unless there is a strong reason otherwise.
+
+For transformation work:
+- document assumptions
+- note primary keys or uniqueness expectations
+- mention data quality concerns
+- keep business logic visible and easy to inspect

@@ -1,0 +1,18 @@
+---
+description: Documentation and portfolio guidance for markdown files
+globs: ["README.md", "docs/**/*.md"]
+---
+
+Treat documentation in this repository as portfolio material.
+
+Documentation should:
+- start with the practical goal
+- say what skill is being demonstrated
+- explain major design choices briefly
+- mention tradeoffs where relevant
+- stay concise and readable
+
+Avoid:
+- generic filler
+- long theory dumps with no practical connection
+- unexplained complexity

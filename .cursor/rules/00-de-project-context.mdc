@@ -1,0 +1,28 @@
+---
+description: Core repository context for the DE learning project
+alwaysApply: true
+---
+
+This repository is for learning Data Engineering through practical implementation.
+
+Main learning areas:
+- SQL and data modeling
+- Python for Data Engineering
+- ETL / ELT pipelines
+- PostgreSQL and warehouse-style thinking
+- dbt, Docker, and production mindset later
+
+Project principles:
+- Prefer simple, working solutions.
+- Keep tasks scoped and portfolio-friendly.
+- Explain tradeoffs and decisions briefly.
+- Make debugging easier with logs and inspectable outputs.
+- Favor maintainable structure over overengineering.
+
+The project owner's GIS background is a strength.
+Translate experience with ETL, validation, complex data, and databases into general DE language.
+
+When suggesting work:
+- start from the practical goal
+- identify the DE skill being demonstrated
+- prefer one small completed component over a large unfinished system
