@@ -1,57 +1,59 @@
-# Sales Data Pipeline
+# Data Engineering Portfolio
 
-A portfolio-friendly Data Engineering mini-project: loading sales transaction data from CSV into PostgreSQL with Python.
+Two mini ETL pipelines demonstrating core Data Engineering skills: CSV ingestion, data cleaning, PostgreSQL loading, SQL transformations, and analytics-ready table design.
 
 ## What this project demonstrates
 
-- **Extract**: reading structured data from a CSV file
-- **Transform**: cleaning, deduplication, format normalization
-- **Load**: inserting data into a PostgreSQL staging table via SSH tunnel
-- **Analysis**: SQL queries to validate and explore loaded data
+- **Extract**: reading structured CSV data into Python
+- **Transform**: cleaning, deduplication, date normalization, validation with logging
+- **Load**: inserting data into PostgreSQL staging tables
+- **SQL transformations**: CTEs, CASE WHEN, window functions (ROW_NUMBER, LAG, running totals)
+- **Analytics layer**: staging → typed analytics table with derived fields
+- **Data modeling**: grain definition, fact table design, business vs surrogate keys
+- **Testing**: pytest unit tests for transform logic without database dependency
 
-## Data source
+## Pipelines
 
-Sample sales transaction data (`data/raw/sales_data.csv`) — 50 rows with intentional data quality issues:
+### Sales pipeline
 
-- inconsistent date formats (YYYY-MM-DD vs DD/MM/YYYY)
-- missing values (customer names, cities)
-- duplicate rows
-- mixed-case categories
-- extra whitespace in fields
+Source: `data/raw/sales_data.csv` — 50 rows with data quality issues (mixed date formats, missing values, duplicates, inconsistent casing).
 
-## How to run
+Run:
+1. Create table: `sql/ddl/create_staging_table.sql`
+2. Execute: `python src/pipelines/run_pipeline.py`
 
-1. Copy `.env.example` to `.env` and fill in your SSH / PostgreSQL credentials
+### Cafe pipeline
+
+Source: `data/raw/cafe_orders.csv` — 45 rows with similar quality issues.
+
+Run:
+1. Create tables: `sql/ddl/create_cafe_staging.sql`, then `sql/ddl/create_cafe_analytics.sql`
+2. Execute: `python src/pipelines/run_cafe_pipeline.py`
+3. Load analytics layer: `sql/transformations/staging_to_analytics.sql`
+
+## Setup
+
+1. Copy `.env.example` to `.env` and fill in PostgreSQL credentials
 2. Install dependencies: `pip install -r requirements.txt`
-3. Create the staging table: run `sql/ddl/create_staging_table.sql` on your database
-4. Run the pipeline: `python src/pipelines/run_pipeline.py`
-5. Check results: run queries from `sql/analysis/first_checks.sql`
+3. Run tests: `python -m pytest tests/ -v`
 
 ## Project structure
 
 ```text
 DE/
-├── data/raw/              ← source CSV files
+├── data/raw/                ← source CSV files
 ├── src/
-│   ├── extract/           ← read source data
-│   ├── transform/         ← clean and normalize
-│   ├── load/              ← write to PostgreSQL
-│   ├── common/            ← config, DB connection
-│   └── pipelines/         ← pipeline entry points
+│   ├── extract/             ← read source data
+│   ├── transform/           ← clean, normalize, validate
+│   ├── load/                ← write to PostgreSQL
+│   ├── common/              ← DB connection, config
+│   └── pipelines/           ← pipeline entry points
 ├── sql/
-│   ├── ddl/               ← table definitions
-│   ├── transformations/   ← SQL transforms (later)
-│   └── analysis/          ← analytical queries
-└── tests/                 ← tests (later)
+│   ├── ddl/                 ← staging and analytics table definitions
+│   ├── transformations/     ← SQL transforms (staging → analytics)
+│   └── analysis/            ← validation and exploration queries
+├── tests/                   ← pytest unit tests
+└── docs/
+    ├── learning_plan/       ← weekly study plans
+    └── modeling/            ← data model documentation
 ```
-
-## Study rhythm
-
-- Sunday: planning and review
-- Tuesday: project deep work
-- Wednesday: SQL and data modeling
-- Thursday: Python ETL / ELT
-
-## Roadmap
-
-See `docs/learning_plan/03_roadmap_16_weeks.md` for the full 16-week plan.
