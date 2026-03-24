@@ -91,3 +91,5 @@ daily_sales as (
 SELECT order_date, daily_income,
     (daily_income - (LAG(daily_income) OVER (ORDER BY order_date))) AS difference
 FROM daily_sales;
+
+--comment to test github
