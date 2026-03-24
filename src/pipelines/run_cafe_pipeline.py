@@ -6,21 +6,24 @@ import psycopg2
 
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
-from src.extract.read_cafe_source import read_data
+from src.extract.read_source import extract
 from src.transform.clean_cafe_rows import transform
-from src.load.load_cafe_to_postgres import load
+from src.load.load_to_postgres import load
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+table_name = "staging.cafe_sales"
+columns = ["order_id", "order_date", "customer_name", "drink", "size", "price", "branch", "payment_method"]
+
 if __name__ == "__main__":
     try:
         logger.info("Extracting data")
-        extracted = read_data("data/raw/cafe_orders.csv")
+        extracted = extract("data/raw/cafe_orders.csv")
         logger.info("Applying transformations")
         transformed = transform(extracted)
         logger.info("Uploading data")
-        load(transformed)
+        load(transformed,table_name,columns)
         logger.info("Data successfully loaded")
     except FileNotFoundError as e:
         logger.error("File not found: %s", e)

@@ -4,17 +4,19 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-def load(rows):
+def load(rows, table_name, columns):
     conn = get_connection()
     cur = conn.cursor()
+    col_names = ", ".join(columns)
+    placeholders = ", ".join(["%s"]*len(columns))
+    sql = f"INSERT INTO {table_name} ({col_names}) VALUES ({placeholders})"
     try:
         cur.execute(
-            'TRUNCATE TABLE staging.raw_sales'
+            f'TRUNCATE TABLE {table_name}'
         )
         for row in rows:
-            cur.execute(
-                "INSERT INTO staging.raw_sales (order_id, order_date, customer_id, customer_name, product_name, category, quantity, unit_price, city, country) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (row["order_id"], row["order_date"], row["customer_id"], row["customer_name"], row["product_name"], row["category"], row["quantity"], row["unit_price"], row["city"], row["country"])
-            )
+            values = tuple(row[col] for col in columns)
+            cur.execute(sql, values)
         conn.commit()
         logger.info("Number of rows: %d", len(rows))
     
