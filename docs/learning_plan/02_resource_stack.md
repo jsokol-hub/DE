@@ -30,6 +30,14 @@ Use case:
 - modular ETL structure
 - reproducible scripts
 
+## DE Roadmap and interview prep
+- Roadmap DE: https://roadmapde.roadmappers.ru/content
+  - DWH / Data Lake / ACID theory
+  - Data models and normal forms
+  - Docker, Airflow, dbt sections
+  - SQL and Python interview questions
+  - Resume and job search advice
+
 ## Later resources
 These are intentionally delayed until the base is stable:
 - Docker official docs
