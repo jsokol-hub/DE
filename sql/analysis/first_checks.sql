@@ -1,7 +1,7 @@
-SELECT COUNT(order_id) as "Total ordred"
+SELECT COUNT(order_id) as "Total ordered"
 FROM staging.cafe_sales;
 
-SELECT branch, COUNT(order_id) as "Total ordred per branch"
+SELECT branch, COUNT(order_id) as "Total ordered per branch"
 FROM staging.cafe_sales
 GROUP BY branch;
 
