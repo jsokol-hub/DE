@@ -1,3 +1,4 @@
+import pytest
 import sys
 from pathlib import Path
 
@@ -70,3 +71,51 @@ def test_date():
     assert len(out) == 1
     r = out[0]
     assert r["order_date"] == "2024-02-01"
+
+
+def test_empty_list():
+    rows = []
+    out = transform(rows)
+    assert len(out) == 0
+
+
+def test_empty_string():
+    rows = [
+        {
+            "order_id": "",
+            "order_date": "",
+            "customer_name": "",
+            "drink": "",
+            "size": "",
+            "price": "",
+            "branch": "",
+            "payment_method": "",
+        }
+    ]
+    out = transform(rows)
+    assert len(out) == 1
+    r = out[0]
+    assert r["order_id"] is None
+    assert r["order_date"] is None
+    assert r["customer_name"] is None
+    assert r["drink"] is None
+    assert r["size"] is None
+    assert r["price"] is None
+    assert r["branch"] is None
+    assert r["payment_method"] is None
+
+
+def test_absolete_row():
+    rows = [
+        {
+            "order_date": "",
+            "customer_name": "",
+            "drink": "",
+            "size": "",
+            "price": "",
+            "branch": "",
+            "payment_method": "",
+        }
+    ]
+    with pytest.raises(KeyError):
+        transform(rows)
