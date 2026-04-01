@@ -31,6 +31,7 @@ Focus:
 - marts
 - tests
 - docs
+- kafka
 
 Outcome:
 - clean transformation layer
