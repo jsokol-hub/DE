@@ -11,6 +11,10 @@ from src.extract.read_source import extract
 from src.transform.clean_cafe_rows import transform as transform_cafe
 from src.transform.clean_rows import transform as transform_sales
 from src.load.load_to_postgres import load
+from src.common.validate import validate
+
+class ValidationError(Exception):
+    pass
 
 #CONFIG SETUP
 pipeline_name = sys.argv[1]
@@ -30,6 +34,19 @@ if __name__ == "__main__":
         extracted = extract(config["source_file"])
         logger.info("Applying transformations")
         transformed = transform_func(extracted)
+        
+        logger.info("Validation started")
+        valid = validate(transformed)
+        if not valid["data_is_valid"]:
+            logger.error(
+                "Validation failed. Total=%s, valid=%s, invalid=%s", valid["total"], valid["valid"], valid["invalid"],
+            )
+            for issue in valid["issues"]:
+                logger.error("Issue: %s", issue)
+            raise ValidationError("Data validation failed")
+        else:
+            logger.info("Validation successful")
+
         logger.info("Uploading data")
         load(transformed,config["table_name"],config["columns"])
         logger.info("Data successfully loaded")
@@ -39,5 +56,7 @@ if __name__ == "__main__":
         logger.error("DB connection error: %s", e)
     except psycopg2.Error as e:
         logger.error("SQL error: %s", e)
+    except ValidationError as e:
+        logger.error("Validation error: %s", e)
     except Exception as e:
-        logger.error("Something going wrong in transformations: %s", e)
+        logger.error("Unexpected pipeline error: %s", e)

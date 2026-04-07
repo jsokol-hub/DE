@@ -1,7 +1,5 @@
 import logging
 
-#commenting for fafo
-
 logger = logging.getLogger(__name__)
 
 def transform(rows):
