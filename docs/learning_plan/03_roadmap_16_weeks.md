@@ -26,16 +26,22 @@ Outcome:
 
 ## Phase 3 — Analytics engineering layer (Weeks 9–12)
 Focus:
-- dbt
-- staging models
-- marts
-- tests
-- docs
-- kafka
+- dbt setup and project structure
+- staging models (stg_*)
+- marts (fct_*, dim_*)
+- sources and refs
+- dbt tests (unique, not_null, relationships, custom)
+- dbt docs and lineage
+- incremental models (intro)
+- macros and Jinja basics
+
+Kafka moved to Phase 4 — different paradigm, better after batch is solid.
 
 Outcome:
-- clean transformation layer
-- clearer warehouse-style structure
+- clean transformation layer managed by dbt
+- tests that run automatically
+- documentation with lineage graph
+- understanding of modern analytics engineering workflow
 
 ## Phase 4 — Production mindset and portfolio polish (Weeks 13–16)
 Focus:

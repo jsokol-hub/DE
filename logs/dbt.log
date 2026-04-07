@@ -1,0 +1,30 @@
+[0m12:28:55.443283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000162361214D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001623A0ADCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001623A18CAD0>]}
+
+
+============================== 12:28:55.459371 | 52f13d79-7350-4334-a102-46524e7e040f ==============================
+[0m12:28:55.459371 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:28:55.461366 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\red-j\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init cafe_dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:28:55.644095 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\red-j\.dbt
+[0m12:28:55.657934 [debug] [MainThread]: Starter project path: C:\Users\red-j\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\dbt\include\starter_project
+[0m12:28:55.777864 [info ] [MainThread]: 
+Your new dbt project "cafe_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:28:55.778878 [info ] [MainThread]: Setting up your profile.
+[0m12:38:15.150001 [info ] [MainThread]: Profile cafe_dbt written to C:\Users\red-j\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:38:15.155946 [debug] [MainThread]: Command `dbt init` succeeded at 12:38:15.155946 after 559.83 seconds
+[0m12:38:15.156947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016238E12BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016231D6F550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001623A0ADCD0>]}
+[0m12:38:15.157952 [debug] [MainThread]: Flushing usage events
+[0m12:38:16.573676 [debug] [MainThread]: An error was encountered while trying to flush usage events
