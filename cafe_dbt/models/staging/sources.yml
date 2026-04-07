@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: staging
+    database: de_project
+    schema: staging
+    tables:
+      - name: cafe_sales

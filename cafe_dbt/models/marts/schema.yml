@@ -1,0 +1,54 @@
+models:
+  - name: fct_orders
+    description: "Fact table ready for analytics"
+    columns:
+      - name: order_id
+        description: "Unique order idetifier"
+      - name: order_date
+        description: "Order date in &YYYY-%MM-%DD format"
+      - name: customer_name
+        description: "Full name of the customer. Can be NULL if it's an anonimus order"
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_name
+      - name: drink
+        description: "Ordered drink name"
+        tests:
+          - relationships:
+              to: ref('dim_drinks')
+              field: drink
+      - name: size
+        description: "Drink size"
+      - name: price
+        description: "Price of the drink. NUMERIC"
+      - name: price_tier
+        description: "Prices aggregated to tiers. (WHEN price < 4 THEN 'Low cost' WHEN price BETWEEN 4 AND 5 THEN 'Mid cost' WHEN price > 5 THEN 'High cost' ELSE 'Undefined')"
+      - name: branch
+        tests:
+          - relationships:
+              to: ref('dim_branches')
+              field: branch
+      - name: payment_method
+        description: "Selected payment method for each order"
+  - name: dim_branches
+    description: "Dimension table for branches"
+    columns:
+      - name: branch
+        description: "Branch name"
+      - name: branch_id
+        description: "Hash branch id"
+  - name: dim_customers
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_name
+        description: "Customer full name"
+      - name: customer_id
+        description: "Hash customer id"
+  - name: dim_drinks
+    description: "Dimension table for drinks"
+    columns:
+      - name: drink
+        description: "Drink name"
+      - name: drink_id
+        description: "Hash drink id"

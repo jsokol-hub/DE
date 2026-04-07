@@ -1,0 +1,38 @@
+models:
+  - name: stg_cafe_orders
+    description: "Staging table for cafe orders. One row per order"
+    columns: 
+      - name: order_id
+        description: "Unique order idetifier"
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+        description: "Order date in &YYYY-%MM-%DD format"
+        tests:
+          - not_null
+      - name: customer_name
+        description: "Full name of the customer. Can be NULL if it's an anonimus order"
+      - name: drink
+        description: "Ordered drink name"
+        tests:
+          - not_null
+      - name: size
+        description: "Drink size"
+        tests:
+          - not_null
+      - name: price
+        description: "Price of the drink. NUMERIC"
+        tests:
+          - not_null
+      - name: price_tier
+        description: "Prices aggregated to tiers. (WHEN price < 4 THEN 'Low cost' WHEN price BETWEEN 4 AND 5 THEN 'Mid cost' WHEN price > 5 THEN 'High cost' ELSE 'Undefined')"
+      - name: branch
+        description: "Name of the branch"
+        tests:
+          - not_null
+      - name: payment_method
+        description: "Selected payment method for each order"
+        tests:
+          - accepted_values:
+              values: ['cash', 'card']
