@@ -43,14 +43,17 @@ Outcome:
 - documentation with lineage graph
 - understanding of modern analytics engineering workflow
 
-## Phase 4 — Production mindset and portfolio polish (Weeks 13–16)
+## Phase 4 — Streaming & Orchestration (Weeks 13–16)
 Focus:
-- project polish
-- documentation
-- packaging
-- testing
-- interview-friendly presentation
+- Apache Kafka fundamentals (producers, consumers, topics, partitions)
+- Streaming vs batch paradigm
+- Airflow basics (DAGs, tasks, scheduling, dependencies)
+- Orchestrating existing pipelines
+- Integration: Kafka → Python → PostgreSQL
+- Portfolio polish and interview prep
 
 Outcome:
-- at least one strong portfolio project
-- clearer bridge from GIS/data background to DE
+- working streaming pipeline (Kafka + Python consumer)
+- Airflow DAG orchestrating dbt + custom tasks
+- understanding of event-driven architecture
+- portfolio-ready project with batch + streaming components

@@ -1,3 +1,8 @@
+{{config(
+    materialized='incremental',
+    unique_key='order_id'
+)}}
+
 SELECT order_id, 
         CAST(order_date AS DATE) AS order_date, 
         customer_name, 
@@ -8,3 +13,7 @@ SELECT order_id,
         branch, 
         payment_method
     FROM {{ref ('stg_cafe_orders')}}
+
+{% if is_incremental() %}
+    WHERE order_date > (SELECT MAX(order_date) FROM {{ this }})
+{% endif %}
